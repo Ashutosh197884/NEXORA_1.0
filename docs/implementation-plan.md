@@ -1,16 +1,38 @@
 # NEXORA v0.1 Implementation Plan
 
-- [x] Project metadata and Apache-2.0 license
-- [x] Local stdio MCP server entry point
-- [x] Four read-only tools
-- [x] Workspace path checks and result/file size limits
-- [x] Unit and security tests
-- [x] MCP in-memory discovery test
-- [x] README, configuration example and security policy
-- [x] CI workflow
-- [ ] Install dependencies in a clean environment and run the full test suite
-- [ ] Verify manually with MCP Inspector on the target developer machine
-- [ ] Create the public repository and push the initial commit
-- [ ] Tag v0.1.0 after clean-environment verification
+## Repository foundation
 
-The last four items require execution or account access outside the source files; they should not be marked complete until verified.
+- [x] Python package metadata and console entry point
+- [x] Apache-2.0 license
+- [x] Public repository and source files
+- [x] README, architecture, development workflow, and security policy
+- [x] GitHub Actions CI workflow
+- [x] Sample CSV and JSON datasets
+
+## Core implementation
+
+- [x] Local stdio MCP server entry point
+- [x] Four read-only developer tools
+- [x] Workspace path checks
+- [x] File-size and result-count limits
+- [x] Unit and security test suites
+- [x] MCP tool-discovery integration test
+
+## Verification and release gates
+
+- [ ] Resolve dependencies in a clean environment
+- [ ] Run `uv run ruff check .` successfully
+- [ ] Run `uv run pytest` successfully
+- [ ] Verify all four tools manually with MCP Inspector
+- [ ] Review GitHub Actions results and address failures
+- [ ] Review package metadata and installation behavior
+- [ ] Tag `v0.1.0` only after the checks above pass
+
+## Future scope
+
+- [ ] Expand adversarial path tests across operating systems
+- [ ] Add more data formats only with explicit size and parsing limits
+- [ ] Design authenticated Streamable HTTP deployment before enabling remote access
+- [ ] Add release automation after the package and tests are stable
+
+A checked item means the corresponding file or capability has been added to the repository. It does not imply that the runtime has been independently verified unless the item explicitly says so.
