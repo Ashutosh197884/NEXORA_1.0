@@ -120,7 +120,3 @@ The MCP SDK owns protocol handling. NEXORA's service layer handles project inspe
 ## License
 
 Licensed under the [Apache License 2.0](LICENSE).
-
-## Project identity
-
-NEXORA is an independent developer-tools project. The repository's commits and contribution history should reflect the actual people making changes; no AI assistant is listed as a project contributor or author.
