@@ -1,0 +1,5 @@
+[
+  {"feature": "file_search", "weekly_uses": 24},
+  {"feature": "code_inspection", "weekly_uses": 15},
+  {"feature": "data_summary", "weekly_uses": 8}
+]
