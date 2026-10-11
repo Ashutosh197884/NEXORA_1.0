@@ -28,7 +28,7 @@
 - [x] Review GitHub Actions failures and address the reported lint and test issues
 - [x] Review package metadata and installation behavior
 - [ ] Optional manual MCP Inspector walkthrough for developer-experience review
-- [ ] Merge the release-readiness pull request
+- [x] Merge the release-readiness pull request
 - [ ] Tag `v0.1.0` after merge and final release review
 
 ## Future scope
