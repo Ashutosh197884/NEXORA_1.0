@@ -10,7 +10,9 @@ from nexora.config import Settings
 
 
 @pytest.mark.asyncio
-async def test_client_discovers_expected_tools(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+async def test_client_discovers_expected_tools(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
     monkeypatch.setattr(server, "settings", Settings(workspace=tmp_path))
 
     async with Client(server.mcp) as client:
