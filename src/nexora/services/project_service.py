@@ -58,7 +58,9 @@ def read_project_file(root: Path, path: str, *, max_bytes: int = 1_048_576) -> d
     target = resolve_workspace_path(root, path)
     if not target.is_file():
         raise ToolInputError("path must refer to a file")
-    if target.suffix.lower() not in TEXT_SUFFIXES and target.name not in {".gitignore", ".env.example", "Dockerfile"}:
+    if target.suffix.lower() not in TEXT_SUFFIXES and target.name not in {
+        ".gitignore", ".env.example", "Dockerfile"
+    }:
         raise ToolInputError("unsupported text file type")
     size = target.stat().st_size
     if size > max_bytes:
@@ -67,7 +69,11 @@ def read_project_file(root: Path, path: str, *, max_bytes: int = 1_048_576) -> d
         content = target.read_text(encoding="utf-8")
     except UnicodeDecodeError as exc:
         raise ToolInputError("file is not valid UTF-8 text") from exc
-    return {"path": target.relative_to(root.resolve()).as_posix(), "size_bytes": size, "content": content}
+    return {
+        "path": target.relative_to(root.resolve()).as_posix(),
+        "size_bytes": size,
+        "content": content,
+    }
 
 
 def search_project_code(
@@ -98,7 +104,9 @@ def search_project_code(
             continue
         if not _is_within(resolved, root):
             continue
-        if resolved.suffix.lower() not in TEXT_SUFFIXES and resolved.name not in {".gitignore", ".env.example", "Dockerfile"}:
+        if resolved.suffix.lower() not in TEXT_SUFFIXES and resolved.name not in {
+            ".gitignore", ".env.example", "Dockerfile"
+        }:
             continue
         try:
             if resolved.stat().st_size > max_file_bytes:
@@ -111,7 +119,12 @@ def search_project_code(
             if query.casefold() in line.casefold():
                 results.append({"path": relative, "line": line_number, "snippet": line[:500]})
                 if len(results) >= max_results:
-                    return {"query": query, "matches": results, "scanned_files": scanned, "truncated": True}
+                    return {
+                        "query": query,
+                        "matches": results,
+                        "scanned_files": scanned,
+                        "truncated": True,
+                    }
     return {"query": query, "matches": results, "scanned_files": scanned, "truncated": False}
 
 
