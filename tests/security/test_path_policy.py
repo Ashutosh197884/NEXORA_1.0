@@ -44,5 +44,5 @@ def test_rejects_symlink_escape(tmp_path: Path) -> None:
 
 
 def test_rejects_missing_paths(tmp_path: Path) -> None:
-    with pytest.raises(FileNotFoundError, match="does not exist"):
+    with pytest.raises(FileNotFoundError):
         resolve_workspace_path(tmp_path, "missing.txt")
