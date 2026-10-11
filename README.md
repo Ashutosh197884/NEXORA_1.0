@@ -1,5 +1,7 @@
 # NEXORA Core
 
+[![CI](https://github.com/Ashutosh197884/NEXORA_1.0/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Ashutosh197884/NEXORA_1.0/actions/workflows/ci.yml)
+
 **Local-first MCP tools for developers.** NEXORA gives AI clients a small, security-minded set of read-only tools for understanding a project workspace.
 
 > **Repository description:** A local-first, security-minded MCP server for developer workflows: workspace file listing, bounded file reading, code search, and CSV/JSON inspection.
@@ -113,8 +115,9 @@ The MCP SDK owns protocol handling. NEXORA's service layer handles project inspe
 - [x] Workspace path validation and bounded reads
 - [x] Unit and security tests
 - [x] CI workflow and project documentation
-- [ ] Verify dependency resolution and all tests in a clean environment
-- [ ] Exercise each tool using MCP Inspector
+- [x] Verify dependency resolution, lint, and tests in clean GitHub Actions environments on Python 3.11, 3.12, and 3.13
+- [x] Exercise MCP tool discovery and stdio invocation through automated integration tests
+- [ ] Optional manual MCP Inspector walkthrough for UI-based review
 - [ ] Add a tested, authenticated Streamable HTTP deployment path in a future release
 
 ## License

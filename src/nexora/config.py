@@ -30,7 +30,7 @@ class Settings:
     log_level: str = "INFO"
 
     @classmethod
-    def from_env(cls) -> "Settings":
+    def from_env(cls) -> Settings:
         workspace_raw = os.getenv("NEXORA_WORKSPACE", ".")
         workspace = Path(workspace_raw).expanduser().resolve()
         if not workspace.exists() or not workspace.is_dir():
