@@ -8,7 +8,7 @@ from pathlib import Path
 from statistics import fmean
 from typing import Any
 
-from nexora.policies.paths import PathPolicyError, resolve_workspace_path
+from nexora.policies.paths import resolve_workspace_path
 
 TEXT_SUFFIXES = {
     ".py", ".pyi", ".js", ".jsx", ".ts", ".tsx", ".json", ".jsonl", ".md",
