@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Activity, ArrowRight, ArrowUpRight, Braces, Check, ChevronDown, ChevronRight, CircleHelp, Clock3, Code2, Command, Copy, Database, FileCode2, FileJson, FileSearch, FileText, Folder, FolderOpen, Gauge, Github, Home, Layers3, LockKeyhole, Menu, Play, Search, ShieldCheck, Sparkles, Terminal, X } from "lucide-react";
+import { Activity, ArrowRight, ArrowUpRight, Braces, Check, ChevronDown, ChevronRight, CircleHelp, Clock3, Command, Copy, Database, FileCode2, FileJson, FileSearch, FileText, Folder, FolderOpen, Gauge, Github, Home, Layers3, LockKeyhole, Menu, Play, Search, ShieldCheck, Sparkles, Terminal, X } from "lucide-react";
 
 type Page = "Overview" | "Workspace" | "Code search" | "Data inspector" | "Tool playground";
 type ToolName = "list_project_files" | "read_project_file" | "search_project_code" | "inspect_data_file";
